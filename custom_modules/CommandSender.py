@@ -21,7 +21,7 @@ def cls(): return os.system('clear')
 """
 
 
-def sendCommand(ip, username, password, command, port="30777"):
+def sendCommand(ip, username, password, command, port):
     try:
         device = ConnectHandler(
             device_type='autodetect', ip=ip, username=username, port=port, password=password)

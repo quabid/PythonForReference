@@ -13,9 +13,10 @@ def cls(): return os.system('clear')
 
 """
     sendTree: Sends a system command to the target host computer system, then outputs the results to standard out.
-    @params ip:             The hostname or IP address of the target system
+          @params ip:       The hostname or IP address of the target system
     @params username:       A username from the system's accounts
     @params password:       The user's password
+        @params port:       The port to make the connection
 """
 
 

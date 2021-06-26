@@ -8,7 +8,7 @@
 - IDE
     - Visual Studio Code v1.57.1
 
-### _Working out code in a virtual environment
+### _Working out code in a virtual environment_
 - *Install virtualenv*
     - sudo apt install virtualenv -y
 - *Initialize project directory*

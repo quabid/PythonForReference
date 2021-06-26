@@ -2,7 +2,7 @@
 import sys
 import os
 from CommandSender import sendCommand
-from Tree import sendTree
+from TreeCommandSender import sendTree
 
 ARG_COUNT = len(sys.argv)
 ARGS = sys.argv

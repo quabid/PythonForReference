@@ -27,6 +27,7 @@ sendTree: Sends the tree command to the target host computer system, then output
       @params ip:     The hostname or IP address of the target system
 @params username:     A username from the system's accounts
 @params password:     The user's password
+    @params port:     The port to make the connection
 """
 
 

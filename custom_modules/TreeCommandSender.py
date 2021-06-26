@@ -38,11 +38,11 @@ def sendTree(ip, username, password, port):
 
     except NetmikoTimeoutException:
         print("\n\n\tTimeout Error: {0}\n\n".format(
-            str(NetmikoTimeoutException)))
+            NetmikoTimeoutException))
 
     except NetmikoAuthenticationException:
         print("\n\n\tAuthentication Error: {0}\n\n".format(
-            str(NetmikoAuthenticationException)))
+            NetmikoAuthenticationException.cause))
 
     except:
         print("\n\n\t{0}\n\n".format("Something else went horribly wrong"))

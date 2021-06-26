@@ -30,6 +30,7 @@ tree: Sends the tree command to the target host computer system, then outputs th
 """
 
 cls()
+
 if ARG_COUNT == 7:
     if ARGS[6].strip().lower() == "send":
         command(ARGS[1], ARGS[2], ARGS[3], ARGS[4], ARGS[5])

@@ -3,7 +3,8 @@
 **I had started learning Python recently and so this project is for reference.**
 
 ---
-- Development Platform
+### _Devlopment Tools_
+- Platform
     - Ubuntu 20.04.2 LTS
 - IDE
     - Visual Studio Code v1.57.1

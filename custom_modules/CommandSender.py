@@ -30,7 +30,7 @@ def sendCommand(ip, username, password, command, port):
 
         cls()
 
-        print("\n\n\tHost: {0}\n\tUser: {1}\n\tCommand: {2}\n\tPort: {3}\n\n".format(
+        print("\n\n\tMethod: sendCommand\n\tHost: {0}\n\tUser: {1}\n\tCommand: {2}\n\tPort: {3}\n\n".format(
             ip, username, command, port))
 
         print(output)

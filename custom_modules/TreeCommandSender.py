@@ -29,7 +29,7 @@ def sendTree(ip, username, password, port):
 
         cls()
 
-        print("\n\n\t\tMethod: sendTree\n\tHost: {0}\n\tUser: {1}\n\tCommand: {2}\n\tPort: {3}\n\n".format(
+        print("\n\n\tMethod: sendTree\n\tHost: {0}\n\tUser: {1}\n\tCommand: {2}\n\tPort: {3}\n\n".format(
             ip, username, "tree", port))
 
         print(output)

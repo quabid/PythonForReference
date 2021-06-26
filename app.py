@@ -1,33 +1,41 @@
 #! /usr/bin/env python3
-
+import sys
 import os
-from netmiko import (
-    ConnectHandler,
-    NetmikoTimeoutException,
-    NetmikoAuthenticationException
-)
-from getpass import getpass
+from custom_modules.index import command, tree
+
+ARG_COUNT = len(sys.argv)
+ARGS = sys.argv
 
 
 def cls(): return os.system('clear')
 
 
-def test():
-    cls()
-    try:
-        device = ConnectHandler(
-            device_type='autodetect', ip='192.168.1.20', username='sjhadmin', port="30777", password=getpass())
-        output = device.send_command("tree")
-        print(output)
-        device.disconnect()
-    except NetmikoTimeoutException:
-        print("\n\n\tTimeout Error: {0}\n\n".format(
-            str(NetmikoTimeoutException)))
-    except NetmikoAuthenticationException:
-        print("\n\n\tAuthentication Error: {0}\n\n".format(
-            str(NetmikoAuthenticationException)))
-    except:
-        print("\n\n\t{0}\n\n".format("Something else went horribly wrong"))
+def log(arg):
+    print("{0}\n".format(str(arg)))
 
 
-test()
+"""
+command: Sends a system command to the target host computer system, then outputs the results to standard out.
+      @params ip:     The hostname or IP address of the target system
+@params username:     A username from the system's accounts
+@params password:     The user's password
+ @params command:     The command to send to the system
+    @params port:     The port to connect with; defaults to 30777
+
+tree: Sends the tree command to the target host computer system, then outputs the results to standard out.
+      @params ip:     The hostname or IP address of the target system
+@params username:     A username from the system's accounts
+@params password:     The user's password
+    @params port:     The port to make the connection
+"""
+
+
+if ARG_COUNT == 7:
+    if ARGS[6].strip().lower() == "send":
+        command(ARGS[1], ARGS[2], ARGS[3], ARGS[4], ARGS[5])
+    else:
+        log("Done")
+elif ARG_COUNT == 5:
+    tree(ARGS[1], ARGS[2], ARGS[3], ARGS[4])
+else:
+    log('done')

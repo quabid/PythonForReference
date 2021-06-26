@@ -23,7 +23,7 @@ sendCommand: Sends a system command to the target host computer system, then out
  @params command:     The command to send to the system
     @params port:     The port to connect with; defaults to 30777
 
-sendTree: Sends the tree system command to the target host computer system, then outputs the results to standard out.
+sendTree: Sends the tree command to the target host computer system, then outputs the results to standard out.
       @params ip:     The hostname or IP address of the target system
 @params username:     A username from the system's accounts
 @params password:     The user's password

@@ -43,7 +43,7 @@ def sendCommand(ip, username, password, command, port):
 
     except NetmikoAuthenticationException:
         print("\n\n\tAuthentication Error: {0}\n\n".format(
-            str(NetmikoAuthenticationException)))
+            "confirm username and/or password"))
 
     except:
         print("\n\n\t{0}\n\n".format("Something else went horribly wrong"))

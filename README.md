@@ -4,7 +4,7 @@
 
 ---
 ### _Devlopment Tools_
-- Platform
+- Platform Tools
     - Ubuntu 20.04.2 LTS
     - Python3 v3.8.5
 - IDE

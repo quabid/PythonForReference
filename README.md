@@ -9,6 +9,8 @@
     - Python3 v3.8.5
 - IDE
     - Visual Studio Code v1.57.1
+- External Dependencies
+    - NetMiko v3.4.0
 
 ### _Working out code in a virtual environment_
 - *Install virtualenv*

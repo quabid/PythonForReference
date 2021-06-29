@@ -1,6 +1,6 @@
 ## Python for Reference
 
-**I had started learning Python recently and so this project is for reference.**
+**I had recently began Python tutorial and so this project is for reference.**
 
 ---
 ### _Devlopment Tools_

@@ -26,7 +26,7 @@ def sendCommand(ip, username, password, command, port):
              device_type='autodetect', ip=ip, username=username, port=port, password=password) """
 
         device = ConnectHandler(
-            device_type='autodetect', ip=ip, username=username, port=port, use_keys=True, passphrase="quabidlord@gmail.com", key_file="/home/sjhadmin/.ssh/id_from_pot_to_water_admin_ed25519")
+            device_type='autodetect', ip=ip, username=username, port=port, use_keys=True, passphrase="", key_file="/home/sjhadmin/.ssh/id_from_pot_to_water_admin_ed25519")
 
         output = device.send_command(command)
 

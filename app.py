@@ -135,7 +135,7 @@ elif ARG_COUNT == 6:
             ip_or_hostname, username, key_file_path, key_file_passphrase, port))
 
         print("\n\tConnect with Key:{} {} {} {} {} {} \n\n".format(ip_or_hostname,
-                                                                   username, key_file_path, passphrase, port, key))
+                                                                   username, key_file_path, key_file_passphrase, port, key))
 
         log("\n")
 

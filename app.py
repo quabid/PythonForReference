@@ -65,7 +65,7 @@ print("\n\t\tArgument Count: {}\n".format(ARG_COUNT))
 
 if ARG_COUNT == 7:
     # Send Command - Username and Password
-    # app.py IP or Hostname Username Password Command Port Action Keyword: pass
+    # app.py <[IP or Hostname]> <Username> <Password> <Command> <Port> <Keyword: "pass">
     key = ARGS[6].strip().lower()
     function = SWITCH[key]
     ip_or_hostname = ARGS[1]
@@ -80,7 +80,7 @@ if ARG_COUNT == 7:
     function(ip_or_hostname, username, password, command, port)
 elif ARG_COUNT == 8:
     # Send Command - Public Key
-    # app.py IP or Hostname Username, Path-to-key-file Passphrase Command Port Action Keyword: key
+    # ./app.py <[IP or Hostname]> <username> </Path/To/Private/Key> <Private Key Passphrase> <Command> <Port> <Keyword:"key">
     key = ARGS[7].strip().lower()
     function = SWITCH[key]
     ip_or_hostname = ARGS[1]
@@ -102,7 +102,7 @@ elif ARG_COUNT == 8:
 
 elif ARG_COUNT == 5:
     # Send Tree Command
-    # app.py IP or Hostname Username Password Port
+    # app.py <[IP or Hostname]> <Username> <Password> <Port>
     key = "treePass"
     function = SWITCH[key]
     ip_or_hostname = ARGS[1]
@@ -116,7 +116,7 @@ elif ARG_COUNT == 5:
     function(ip_or_hostname, username, password, port)
 elif ARG_COUNT == 6:
     # Send Tree Command
-    # app.py IP or Hostname Username Path-to-key-file Passphrase Port
+    # app.py <[IP or Hostname]> <Username> </Path/To/Private/Key> <Private Key Passphrase> <Port>
     key = "treeKey"
     function = SWITCH[key]
     ip_or_hostname = ARGS[1]

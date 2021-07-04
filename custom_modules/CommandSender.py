@@ -30,8 +30,6 @@ def sendCommandPassword(ip, username, password, command, port):
 
         output = device.send_command(command)
 
-        cls()
-
         print("\n\n\tMethod: sendCommand\n\tHost: {0}\n\tUser: {1}\n\tCommand: {2}\n\tPort: {3}\n\n".format(
             ip, username, command, port))
 

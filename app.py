@@ -126,15 +126,21 @@ elif ARG_COUNT == 6:
     ip_or_hostname = ARGS[1]
     username = ARGS[2]
     key_file_path = ARGS[3]
-    passphrase = ARGS[4]
+    key_file_passphrase = ARGS[4]
     port = ARGS[5]
 
     if fileExists(key_file_path):
 
+        log("\n\tStatement:\tapp.py {} {} {} {} {}\n\n".format(
+            ip_or_hostname, username, key_file_path, key_file_passphrase, port))
+
         print("\n\tConnect with Key:{} {} {} {} {} {} \n\n".format(ip_or_hostname,
                                                                    username, key_file_path, passphrase, port, key))
 
-        function(ip_or_hostname, username, key_file_path, passphrase, port)
+        log("\n")
+
+        function(ip_or_hostname, username, key_file_path,
+                 key_file_passphrase, port)
     else:
         print("\n\tPrivate Key: {} does not exist\n".format(key_file_path))
 else:

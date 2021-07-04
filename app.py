@@ -79,7 +79,7 @@ if ARG_COUNT == 7:
 
     function(ip_or_hostname, username, password, command, port)
 elif ARG_COUNT == 8:
-    # Send Command - Public Key
+    # Send Command - Private Key
     # ./app.py <[IP or Hostname]> <username> </Path/To/Private/Key> <Private Key Passphrase> <Command> <Port> <Keyword:"key">
     key = ARGS[7].strip().lower()
     function = SWITCH[key]
@@ -101,7 +101,7 @@ elif ARG_COUNT == 8:
         print("\n\tPrivate Key: {} does not exist\n".format(key_file_path))
 
 elif ARG_COUNT == 5:
-    # Send Tree Command
+    # Send Tree Command: Username Password
     # app.py <[IP or Hostname]> <Username> <Password> <Port>
     key = "treePass"
     function = SWITCH[key]
@@ -115,7 +115,7 @@ elif ARG_COUNT == 5:
 
     function(ip_or_hostname, username, password, port)
 elif ARG_COUNT == 6:
-    # Send Tree Command
+    # Send Tree Command: Private Key
     # app.py <[IP or Hostname]> <Username> </Path/To/Private/Key> <Private Key Passphrase> <Port>
     key = "treeKey"
     function = SWITCH[key]

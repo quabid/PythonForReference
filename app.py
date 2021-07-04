@@ -50,7 +50,6 @@ treeKey: Sends the tree command to the target host computer system, then outputs
     @params port:               The port to make the connection
 """
 
-cls()
 
 '''         CLI Usage
 
@@ -81,6 +80,7 @@ if ARG_COUNT == 7:
 elif ARG_COUNT == 8:
     # Send Command - Private Key
     # ./app.py <[IP or Hostname]> <username> </Path/To/Private/Key> <Private Key Passphrase> <Command> <Port> <Keyword:"key">
+    cls()
     key = ARGS[7].strip().lower()
     function = SWITCH[key]
     ip_or_hostname = ARGS[1]
@@ -89,6 +89,8 @@ elif ARG_COUNT == 8:
     key_file_passphrase = ARGS[4]
     command = ARGS[5]
     port = ARGS[6]
+    log("\n\tStatement:\tapp.py {} {} {} {} {} {}\n\n".format(
+        ip_or_hostname, username, key_file_path, key_file_passphrase, command, port))
 
     if fileExists(key_file_path):
 
@@ -97,8 +99,10 @@ elif ARG_COUNT == 8:
 
         function(ip_or_hostname, username, key_file_path,
                  key_file_passphrase, command, port)
+
+        log("\n")
     else:
-        print("\n\tPrivate Key: {} does not exist\n".format(key_file_path))
+        print("\n\tPrivate Key: {} does not exist\n\n".format(key_file_path))
 
 elif ARG_COUNT == 5:
     # Send Tree Command: Username Password

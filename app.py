@@ -130,6 +130,7 @@ elif ARG_COUNT == 6:
     port = ARGS[5]
 
     if fileExists(key_file_path):
+        cls()
 
         log("\n\tStatement:\tapp.py {} {} {} {} {}\n\n".format(
             ip_or_hostname, username, key_file_path, key_file_passphrase, port))

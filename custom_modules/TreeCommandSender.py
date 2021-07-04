@@ -62,8 +62,6 @@ def sendTreeKey(ip, username, key_file_path, pass_phrase, port):
 
         output = device.send_command("tree")
 
-        cls()
-
         print("\n\n\tMethod: sendTree\n\tHost: {0}\n\tUser: {1}\n\tCommand: {2}\n\tPort: {3}\n\n".format(
             ip, username, "tree", port))
 
